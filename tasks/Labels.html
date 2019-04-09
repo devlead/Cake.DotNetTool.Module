@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/Cake.DotNetTool.Module/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/Cake.DotNetTool.Module/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake.DotNetTool.Module - Upload Coveralls Report</title>
+        <title>Cake.DotNetTool.Module - Labels</title>
         <link href="/Cake.DotNetTool.Module/assets/css/mermaid.css" rel="stylesheet">
         <link href="/Cake.DotNetTool.Module/assets/css/highlight.css" rel="stylesheet">
         <link href="/Cake.DotNetTool.Module/assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
@@ -74,7 +74,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-        <div><p><a href="https://github.com/cake-contrib/Cake.DotNetTool.Module/tree/develop/docs/input/tasks/Upload-Coveralls-Report.md"><i class="fa fa-pencil-square" aria-hidden="true"></i> Edit Content</a></p></div>
+        <div><p><a href="https://github.com/cake-contrib/Cake.DotNetTool.Module/tree/develop/docs/input/tasks/Labels.md"><i class="fa fa-pencil-square" aria-hidden="true"></i> Edit Content</a></p></div>
     <div id="infobar-headings"></div>
 
                 </section>
@@ -111,7 +111,7 @@
                 <li><a href="/Cake.DotNetTool.Module/tasks/Install-OpenCover">Install Opencover</a></li>
                 <li><a href="/Cake.DotNetTool.Module/tasks/Install-ReportGenerator">Install Reportgenerator</a></li>
                 <li><a href="/Cake.DotNetTool.Module/tasks/Install-ReportUnit">Install Reportunit</a></li>
-                <li><a href="/Cake.DotNetTool.Module/tasks/Labels">Labels</a></li>
+                <li class="selected"><a href="/Cake.DotNetTool.Module/tasks/Labels">Labels</a></li>
                 <li><a href="/Cake.DotNetTool.Module/tasks/Package">Package</a></li>
                 <li><a href="/Cake.DotNetTool.Module/tasks/Preview">Preview</a></li>
                 <li><a href="/Cake.DotNetTool.Module/tasks/Preview-Documentation">Preview Documentation</a></li>
@@ -139,7 +139,7 @@
                 <li><a href="/Cake.DotNetTool.Module/tasks/Upload-AppVeyor-Artifacts">Upload Appveyor Artifacts</a></li>
                 <li><a href="/Cake.DotNetTool.Module/tasks/Upload-Codecov-Report">Upload Codecov Report</a></li>
                 <li><a href="/Cake.DotNetTool.Module/tasks/Upload-Coverage-Report">Upload Coverage Report</a></li>
-                <li class="selected"><a href="/Cake.DotNetTool.Module/tasks/Upload-Coveralls-Report">Upload Coveralls Report</a></li>
+                <li><a href="/Cake.DotNetTool.Module/tasks/Upload-Coveralls-Report">Upload Coveralls Report</a></li>
 
                     </ul>
                             
@@ -153,20 +153,12 @@
 
 
 		<section class="content-header">
-			<h1>Upload Coveralls Report</h1>
+			<h1>Labels</h1>
 		</section>
 	<section class="content">
 		<div class="mermaid">
 graph TD;
-Upload-Coveralls-Report-->Test;
-Test-->DotNetCore-Build;
-Test-->DotNetCore-Test;
-DotNetCore-Test-->Install-OpenCover;
-Install-OpenCover-->Install-ReportGenerator;
-DotNetCore-Build-->Clean;
-DotNetCore-Build-->DotNetCore-Restore;
-Clean-->Show-Info;
-Clean-->Print-AppVeyor-Environment-Variables;
+Labels-->Create-Default-Labels;
 </div>
 
 	</section>
