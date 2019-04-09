@@ -39,20 +39,6 @@ var searchModule = function() {
     a(
         {
             id:0,
-            title:"DotNetToolContentResolver",
-            content:"DotNetToolContentResolver",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Cake.DotNetTool.Module/api/Cake.DotNetTool.Module/DotNetToolContentResolver',
-            title:"DotNetToolContentResolver",
-            description:""
-        }
-    );
-    a(
-        {
-            id:1,
             title:"DotNetToolModule",
             content:"DotNetToolModule",
             description:'',
@@ -66,21 +52,21 @@ var searchModule = function() {
     );
     a(
         {
-            id:2,
-            title:"IDotNetToolContentResolver",
-            content:"IDotNetToolContentResolver",
+            id:1,
+            title:"DotNetToolContentResolver",
+            content:"DotNetToolContentResolver",
             description:'',
             tags:''
         },
         {
-            url:'/Cake.DotNetTool.Module/api/Cake.DotNetTool.Module/IDotNetToolContentResolver',
-            title:"IDotNetToolContentResolver",
+            url:'/Cake.DotNetTool.Module/api/Cake.DotNetTool.Module/DotNetToolContentResolver',
+            title:"DotNetToolContentResolver",
             description:""
         }
     );
     a(
         {
-            id:3,
+            id:2,
             title:"DotNetToolPackageInstaller",
             content:"DotNetToolPackageInstaller",
             description:'',
@@ -89,6 +75,20 @@ var searchModule = function() {
         {
             url:'/Cake.DotNetTool.Module/api/Cake.DotNetTool.Module/DotNetToolPackageInstaller',
             title:"DotNetToolPackageInstaller",
+            description:""
+        }
+    );
+    a(
+        {
+            id:3,
+            title:"IDotNetToolContentResolver",
+            content:"IDotNetToolContentResolver",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Cake.DotNetTool.Module/api/Cake.DotNetTool.Module/IDotNetToolContentResolver',
+            title:"IDotNetToolContentResolver",
             description:""
         }
     );
