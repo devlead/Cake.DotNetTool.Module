@@ -7,7 +7,6 @@
         <link rel="shortcut icon" href="/Cake.DotNetTool.Module/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/Cake.DotNetTool.Module/assets/img/favicon.ico" type="image/x-icon">
         <title>Cake.DotNetTool.Module - Parameters</title>
-        <link href="/Cake.DotNetTool.Module/assets/css/mermaid.css" rel="stylesheet">
         <link href="/Cake.DotNetTool.Module/assets/css/highlight.css" rel="stylesheet">
         <link href="/Cake.DotNetTool.Module/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/Cake.DotNetTool.Module/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -22,6 +21,7 @@
         <script src="/Cake.DotNetTool.Module/assets/js/jquery.slimscroll.min.js"></script>
         <script src="/Cake.DotNetTool.Module/assets/js/jquery.sticky-kit.min.js"></script>
         <script src="/Cake.DotNetTool.Module/assets/js/mermaid.min.js"></script>
+        <script src="/Cake.DotNetTool.Module/assets/js/svg-pan-zoom.min.js"></script>
         <!--[if lt IE 9]>
         <script src="/Cake.DotNetTool.Module/assets/js/html5shiv.min.js"></script>
         <script src="/Cake.DotNetTool.Module/assets/js/respond.min.js"></script>
@@ -78,6 +78,7 @@
 <p><a href="#version">Version</a></p>
 <p><a href="#global">Global</a></p>
 <p><a href="#config-file">Config File</a></p>
+<p><a href="#ignore-failed-sources">Ignore failed sources</a></p>
 <p><a href="#framework">Framework</a></p>
 <p><a href="#verbosity">Verbosity</a></p>
 <hr class="infobar-hidden">
@@ -150,9 +151,14 @@
 <h2 id="example-4">Example</h2>
 <pre><code>#tool dotnet:?package=Octopus.DotNet.Cli&amp;version=4.41.0&amp;configfile="../../NuGet.config"
 </code></pre>
+<h1 id="ignore-failed-sources">Ignore failed sources</h1>
+<p>There might be cases where you want to ignore failed NuGet sources as long as the package could be restored.</p>
+<h2 id="example-5">Example</h2>
+<pre><code>#tool dotnet:?package=Octopus.DotNet.Cli&amp;version=4.41.0&amp;ignore-failed-sources"
+</code></pre>
 <h1 id="framework">Framework</h1>
 <p>Specifies the <a href="https://docs.microsoft.com/en-us/dotnet/standard/frameworks">target framework</a> to install the tool for. By default, the .NET Core SDK tries to choose the most appropriate target framework.</p>
-<h2 id="example-5">Example</h2>
+<h2 id="example-6">Example</h2>
 <pre><code>#tool dotnet:?package=Octopus.DotNet.Cli&amp;version=4.41.0&amp;framework="net472"
 </code></pre>
 <h1 id="verbosity">Verbosity</h1>
@@ -182,22 +188,53 @@
                 $(document.body).removeClass('sidebar-open');
             });
             
-            $(document).load(function() {
+            $(document).ready(function() {
                 mermaid.initialize(
                 {
                     flowchart:
                     {
-                        htmlLabels: false,
-                        useMaxWidth:false
-                    }
-                });  
-                mermaid.init(undefined, ".mermaid")
-                $('svg').addClass('img-responsive');
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
                 
                 $('pre code').each(function(i, block) {
                     hljs.highlightBlock(block);
                 });  
             });
+
             hljs.initHighlightingOnLoad();
 
             // Back to top
