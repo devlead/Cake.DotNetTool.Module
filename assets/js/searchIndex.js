@@ -53,14 +53,14 @@ var searchModule = function() {
     a(
         {
             id:1,
-            title:"DotNetToolPackageInstaller",
-            content:"DotNetToolPackageInstaller",
+            title:"DotNetToolPackage",
+            content:"DotNetToolPackage",
             description:'',
             tags:''
         },
         {
-            url:'/Cake.DotNetTool.Module/api/Cake.DotNetTool.Module/DotNetToolPackageInstaller',
-            title:"DotNetToolPackageInstaller",
+            url:'/Cake.DotNetTool.Module/api/Cake.DotNetTool.Module/DotNetToolPackage',
+            title:"DotNetToolPackage",
             description:""
         }
     );
@@ -89,6 +89,34 @@ var searchModule = function() {
         {
             url:'/Cake.DotNetTool.Module/api/Cake.DotNetTool.Module/IDotNetToolContentResolver',
             title:"IDotNetToolContentResolver",
+            description:""
+        }
+    );
+    a(
+        {
+            id:4,
+            title:"DotNetToolOperation",
+            content:"DotNetToolOperation",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Cake.DotNetTool.Module/api/Cake.DotNetTool.Module/DotNetToolOperation',
+            title:"DotNetToolOperation",
+            description:""
+        }
+    );
+    a(
+        {
+            id:5,
+            title:"DotNetToolPackageInstaller",
+            content:"DotNetToolPackageInstaller",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Cake.DotNetTool.Module/api/Cake.DotNetTool.Module/DotNetToolPackageInstaller',
+            title:"DotNetToolPackageInstaller",
             description:""
         }
     );

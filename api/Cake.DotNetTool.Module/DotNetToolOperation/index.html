@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/Cake.DotNetTool.Module/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/Cake.DotNetTool.Module/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake.DotNetTool.Module - API - DotNetToolPackageInstaller Class</title>
+        <title>Cake.DotNetTool.Module - API - DotNetToolOperation Enum</title>
         <link href="/Cake.DotNetTool.Module/assets/css/highlight.css" rel="stylesheet">
         <link href="/Cake.DotNetTool.Module/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/Cake.DotNetTool.Module/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -72,10 +72,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Constructors">Constructors</a></p>
-<p><a href="#Methods">Methods</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+<p><a href="#fields">Fields</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -141,11 +139,11 @@
 				<li><a href="/Cake.DotNetTool.Module/api/Cake.DotNetTool.Module/DotNetToolContentResolver">Dot<wbr>Net<wbr>Tool<wbr>Content<wbr>Resolver</a></li>
 				<li><a href="/Cake.DotNetTool.Module/api/Cake.DotNetTool.Module/DotNetToolModule">DotNetToolModule</a></li>
 				<li><a href="/Cake.DotNetTool.Module/api/Cake.DotNetTool.Module/DotNetToolPackage">DotNetToolPackage</a></li>
-				<li class="selected"><a href="/Cake.DotNetTool.Module/api/Cake.DotNetTool.Module/DotNetToolPackageInstaller">Dot<wbr>Net<wbr>Tool<wbr>Package<wbr>Installer</a></li>
+				<li><a href="/Cake.DotNetTool.Module/api/Cake.DotNetTool.Module/DotNetToolPackageInstaller">Dot<wbr>Net<wbr>Tool<wbr>Package<wbr>Installer</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/Cake.DotNetTool.Module/api/Cake.DotNetTool.Module/IDotNetToolContentResolver">I<wbr>Dot<wbr>Net<wbr>Tool<wbr>Content<wbr>Resolver</a></li>
 			<li class="header">Enum Types</li>
-				<li><a href="/Cake.DotNetTool.Module/api/Cake.DotNetTool.Module/DotNetToolOperation">DotNetToolOperation</a></li>
+				<li class="selected"><a href="/Cake.DotNetTool.Module/api/Cake.DotNetTool.Module/DotNetToolOperation">DotNetToolOperation</a></li>
 
 
                     </ul>
@@ -160,16 +158,12 @@
 
 
 <section class="content-header">
-	<h1>Dot<wbr>Net<wbr>Tool<wbr>Package<wbr>Installer <small>Class</small></h1>
+	<h1>DotNetToolOperation <small>Enum</small></h1>
 </section>
 <section class="content">
 	
 	
-		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-    Installer for dotnet Tool Packages.
-    </div>
-
+	
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -179,11 +173,21 @@
 								<dt>Namespace</dt>
 								<dd><a href="/Cake.DotNetTool.Module/api/Cake.DotNetTool.Module">Cake<wbr>.DotNetTool<wbr>.Module</a></dd>
 											
+								<dt>Interfaces</dt>
+								<dd>
+									<ul class="list-unstyled">
+											<li>IComparable</li>								
+											<li>IFormattable</li>								
+											<li>IConvertible</li>								
+									</ul>
+								</dd>
 							
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>IPackageInstaller</li>								
+											<li>object</li>								
+											<li>ValueType</li>								
+											<li>Enum</li>								
 									</ul>
 								</dd>				
 							
@@ -193,8 +197,13 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph BT
-	Type--&gt;Base0["IPackageInstaller"]
-	Type["DotNetToolPackageInstaller"]
+	Type--&gt;Base0["Enum"]
+	Base0--&gt;Base1["ValueType"]
+	Base1--&gt;Base2["object"]
+	Type-.-&gt;Interface0["IComparable"]
+	Type-.-&gt;Interface1["IFormattable"]
+	Type-.-&gt;Interface2["IConvertible"]
+	Type["DotNetToolOperation"]
 class Type type-node
 
 						</div>
@@ -204,7 +213,7 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public sealed class DotNetToolPackageInstaller : IPackageInstaller</code></pre>
+	<pre><code>public enum DotNetToolOperation</code></pre>
 
 
 
@@ -212,63 +221,49 @@ class Type type-node
 
 
 
-			<h1 id="Constructors">Constructors</h1>
-			<div class="box">
-				<div class="box-body no-padding table-responsive">
-					<table class="table table-striped table-hover two-cols">
-						<thead>
-							<tr>
-								<th>Name</th>
-									<th>Summary</th>
-							</tr>
-						</thead>
-							<tbody><tr>
-								<td><a href="/Cake.DotNetTool.Module/api/Cake.DotNetTool.Module/DotNetToolPackageInstaller/CF0850FE">Dot<wbr>Net<wbr>Tool<wbr>Package<wbr>Installer<wbr>(ICakeEnvironment, <wbr>IProcessRunner, <wbr>ICakeLog, <wbr>I<wbr>Dot<wbr>Net<wbr>Tool<wbr>Content<wbr>Resolver, <wbr>ICakeConfiguration, <wbr>IFileSystem)<wbr></a></td>
-									<td>
-    Initializes a new instance of the <code class="cs"><a href="/Cake.DotNetTool.Module/api/Cake.DotNetTool.Module/DotNetToolPackageInstaller">DotNetToolPackageInstaller</a></code> class.
-    </td>
-							</tr>
-					</tbody></table>
-				</div>
-			</div>
-		
 
 
-
-
-			<h1 id="Methods">Methods</h1>
+			<h1 id="fields">Fields</h1>
 			<div class="box">
 				<div class="box-body no-padding table-responsive">
 					<table class="table table-striped table-hover three-cols">
 						<thead>
 							<tr>
 								<th>Name</th>
-								<th>Value</th>
+								<th>Constant Value</th>
 								<th>Summary</th>
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/Cake.DotNetTool.Module/api/Cake.DotNetTool.Module/DotNetToolPackageInstaller/F6ACD550">CanInstall<wbr>(PackageReference, <wbr>PackageType)<wbr></a></td>
-								<td>bool</td>
+								<td><a href="/Cake.DotNetTool.Module/api/Cake.DotNetTool.Module/DotNetToolOperation/7CDD8F4C">Install</a></td>
+								<td>0</td>
 								<td>
-									<div>
-    Determines whether this instance can install the specified resource.
-    </div>
+									<div></div>
+											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/Cake.DotNetTool.Module/api/Cake.DotNetTool.Module/DotNetToolPackageInstaller/46BB39F4">Install<wbr>(PackageReference, <wbr>PackageType, <wbr>DirectoryPath)<wbr></a></td>
-								<td>IReadOnlyCollection<wbr>&lt;IFile&gt;<wbr></td>
+								<td><a href="/Cake.DotNetTool.Module/api/Cake.DotNetTool.Module/DotNetToolOperation/E2B43F1B">Uninstall</a></td>
+								<td>1</td>
 								<td>
-									<div>
-    Installs the specified resource at the given location.
-    </div>
+									<div></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/Cake.DotNetTool.Module/api/Cake.DotNetTool.Module/DotNetToolOperation/65E929DB">Update</a></td>
+								<td>2</td>
+								<td>
+									<div></div>
+											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
 					</tbody></table>
 				</div>
 			</div>
 		
+
+
 
 
 
