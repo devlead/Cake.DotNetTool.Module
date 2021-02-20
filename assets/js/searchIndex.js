@@ -39,6 +39,20 @@ var searchModule = function() {
     a(
         {
             id:0,
+            title:"IDotNetToolContentResolver",
+            content:"IDotNetToolContentResolver",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Cake.DotNetTool.Module/api/Cake.DotNetTool.Module/IDotNetToolContentResolver',
+            title:"IDotNetToolContentResolver",
+            description:""
+        }
+    );
+    a(
+        {
+            id:1,
             title:"DotNetToolContentResolver",
             content:"DotNetToolContentResolver",
             description:'',
@@ -47,20 +61,6 @@ var searchModule = function() {
         {
             url:'/Cake.DotNetTool.Module/api/Cake.DotNetTool.Module/DotNetToolContentResolver',
             title:"DotNetToolContentResolver",
-            description:""
-        }
-    );
-    a(
-        {
-            id:1,
-            title:"DotNetToolOperation",
-            content:"DotNetToolOperation",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Cake.DotNetTool.Module/api/Cake.DotNetTool.Module/DotNetToolOperation',
-            title:"DotNetToolOperation",
             description:""
         }
     );
@@ -81,6 +81,20 @@ var searchModule = function() {
     a(
         {
             id:3,
+            title:"DotNetToolOperation",
+            content:"DotNetToolOperation",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Cake.DotNetTool.Module/api/Cake.DotNetTool.Module/DotNetToolOperation',
+            title:"DotNetToolOperation",
+            description:""
+        }
+    );
+    a(
+        {
+            id:4,
             title:"DotNetToolPackage",
             content:"DotNetToolPackage",
             description:'',
@@ -89,20 +103,6 @@ var searchModule = function() {
         {
             url:'/Cake.DotNetTool.Module/api/Cake.DotNetTool.Module/DotNetToolPackage',
             title:"DotNetToolPackage",
-            description:""
-        }
-    );
-    a(
-        {
-            id:4,
-            title:"IDotNetToolContentResolver",
-            content:"IDotNetToolContentResolver",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Cake.DotNetTool.Module/api/Cake.DotNetTool.Module/IDotNetToolContentResolver',
-            title:"IDotNetToolContentResolver",
             description:""
         }
     );
