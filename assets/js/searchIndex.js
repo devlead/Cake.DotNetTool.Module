@@ -39,84 +39,84 @@ var searchModule = function() {
     a(
         {
             id:0,
-            title:"IDotNetToolContentResolver",
-            content:"IDotNetToolContentResolver",
+            title:"GitterProvider",
+            content:"GitterProvider",
             description:'',
             tags:''
         },
         {
-            url:'/Cake.DotNetTool.Module/api/Cake.DotNetTool.Module/IDotNetToolContentResolver',
-            title:"IDotNetToolContentResolver",
+            url:'/Cake.Gitter/api/Cake.Gitter/GitterProvider',
+            title:"GitterProvider",
             description:""
         }
     );
     a(
         {
             id:1,
-            title:"DotNetToolContentResolver",
-            content:"DotNetToolContentResolver",
+            title:"GitterChatMessageResult",
+            content:"GitterChatMessageResult",
             description:'',
             tags:''
         },
         {
-            url:'/Cake.DotNetTool.Module/api/Cake.DotNetTool.Module/DotNetToolContentResolver',
-            title:"DotNetToolContentResolver",
+            url:'/Cake.Gitter/api/Cake.Gitter.Chat/GitterChatMessageResult',
+            title:"GitterChatMessageResult",
             description:""
         }
     );
     a(
         {
             id:2,
-            title:"DotNetToolModule",
-            content:"DotNetToolModule",
+            title:"GitterMessageLevel",
+            content:"GitterMessageLevel",
             description:'',
             tags:''
         },
         {
-            url:'/Cake.DotNetTool.Module/api/Cake.DotNetTool.Module/DotNetToolModule',
-            title:"DotNetToolModule",
+            url:'/Cake.Gitter/api/Cake.Gitter.Chat/GitterMessageLevel',
+            title:"GitterMessageLevel",
             description:""
         }
     );
     a(
         {
             id:3,
-            title:"DotNetToolOperation",
-            content:"DotNetToolOperation",
+            title:"GitterChatMessageSettings",
+            content:"GitterChatMessageSettings",
             description:'',
             tags:''
         },
         {
-            url:'/Cake.DotNetTool.Module/api/Cake.DotNetTool.Module/DotNetToolOperation',
-            title:"DotNetToolOperation",
+            url:'/Cake.Gitter/api/Cake.Gitter.Chat/GitterChatMessageSettings',
+            title:"GitterChatMessageSettings",
             description:""
         }
     );
     a(
         {
             id:4,
-            title:"DotNetToolPackage",
-            content:"DotNetToolPackage",
+            title:"GitterAliases",
+            content:"GitterAliases",
             description:'',
             tags:''
         },
         {
-            url:'/Cake.DotNetTool.Module/api/Cake.DotNetTool.Module/DotNetToolPackage',
-            title:"DotNetToolPackage",
+            url:'/Cake.Gitter/api/Cake.Gitter/GitterAliases',
+            title:"GitterAliases",
             description:""
         }
     );
     a(
         {
             id:5,
-            title:"DotNetToolPackageInstaller",
-            content:"DotNetToolPackageInstaller",
+            title:"GitterChatProvider",
+            content:"GitterChatProvider",
             description:'',
             tags:''
         },
         {
-            url:'/Cake.DotNetTool.Module/api/Cake.DotNetTool.Module/DotNetToolPackageInstaller',
-            title:"DotNetToolPackageInstaller",
+            url:'/Cake.Gitter/api/Cake.Gitter.Chat/GitterChatProvider',
+            title:"GitterChatProvider",
             description:""
         }
     );
