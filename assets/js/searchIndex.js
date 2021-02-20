@@ -39,84 +39,28 @@ var searchModule = function() {
     a(
         {
             id:0,
-            title:"GitterProvider",
-            content:"GitterProvider",
+            title:"TwitterProvider",
+            content:"TwitterProvider",
             description:'',
             tags:''
         },
         {
-            url:'/Cake.Gitter/api/Cake.Gitter/GitterProvider',
-            title:"GitterProvider",
+            url:'/Cake.Twitter/api/Cake.Twitter/TwitterProvider',
+            title:"TwitterProvider",
             description:""
         }
     );
     a(
         {
             id:1,
-            title:"GitterChatMessageResult",
-            content:"GitterChatMessageResult",
+            title:"TwitterAliases",
+            content:"TwitterAliases",
             description:'',
             tags:''
         },
         {
-            url:'/Cake.Gitter/api/Cake.Gitter.Chat/GitterChatMessageResult',
-            title:"GitterChatMessageResult",
-            description:""
-        }
-    );
-    a(
-        {
-            id:2,
-            title:"GitterMessageLevel",
-            content:"GitterMessageLevel",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Cake.Gitter/api/Cake.Gitter.Chat/GitterMessageLevel',
-            title:"GitterMessageLevel",
-            description:""
-        }
-    );
-    a(
-        {
-            id:3,
-            title:"GitterChatMessageSettings",
-            content:"GitterChatMessageSettings",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Cake.Gitter/api/Cake.Gitter.Chat/GitterChatMessageSettings',
-            title:"GitterChatMessageSettings",
-            description:""
-        }
-    );
-    a(
-        {
-            id:4,
-            title:"GitterAliases",
-            content:"GitterAliases",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Cake.Gitter/api/Cake.Gitter/GitterAliases',
-            title:"GitterAliases",
-            description:""
-        }
-    );
-    a(
-        {
-            id:5,
-            title:"GitterChatProvider",
-            content:"GitterChatProvider",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Cake.Gitter/api/Cake.Gitter.Chat/GitterChatProvider',
-            title:"GitterChatProvider",
+            url:'/Cake.Twitter/api/Cake.Twitter/TwitterAliases',
+            title:"TwitterAliases",
             description:""
         }
     );
